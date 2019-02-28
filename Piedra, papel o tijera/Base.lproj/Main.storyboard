@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Juego View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="JuegoViewController" customModule="Piedra__papel_o_tijera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bdl-gv-mJ5">
+                                <rect key="frame" x="29.5" y="283.5" width="316" height="120"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="BFg-Gd-7gR">
+                                        <rect key="frame" x="0.0" y="0.0" width="316" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enH-Vt-5iM" userLabel="btnPiedra">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="6rx-i9-XWv"/>
+                                                    <constraint firstAttribute="height" constant="60" id="cIj-sM-j2R"/>
+                                                </constraints>
+                                                <state key="normal" image="rock"/>
+                                                <connections>
+                                                    <action selector="piedra:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GbB-0L-1PE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kav-DW-abu" userLabel="btnPapel">
+                                                <rect key="frame" x="123" y="0.0" width="70" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="5Cy-bj-5EU"/>
+                                                    <constraint firstAttribute="width" constant="70" id="tMy-nD-bPX"/>
+                                                </constraints>
+                                                <state key="normal" image="paper"/>
+                                                <connections>
+                                                    <action selector="papel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BRx-ez-c1d"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVf-1f-dGd" userLabel="btnTijeras">
+                                                <rect key="frame" x="246" y="0.0" width="70" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Lqg-uv-E4Y"/>
+                                                    <constraint firstAttribute="height" constant="60" id="n3x-tS-CQN"/>
+                                                </constraints>
+                                                <state key="normal" image="scissors"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Piedra, papel o tijera!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjd-ls-LOJ">
+                                        <rect key="frame" x="0.0" y="60" width="316" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bdl-gv-mJ5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NVO-Yp-j0s"/>
+                            <constraint firstItem="bdl-gv-mJ5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="z2n-my-lx5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="fXV-cK-3mf" kind="presentation" identifier="modalResultado" id="aPD-3e-Soc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Resultado View Controller-->
+        <scene sceneID="ejD-GJ-MGR">
+            <objects>
+                <viewController id="fXV-cK-3mf" customClass="ResultadoViewController" customModule="Piedra__papel_o_tijera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xt7-h3-TEN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rrq-Cs-D3S">
+                                <rect key="frame" x="0.0" y="238.5" width="375" height="210"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GQg-TC-t76">
+                                        <rect key="frame" x="152.5" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="1hK-mu-G3l"/>
+                                            <constraint firstAttribute="height" constant="70" id="J7M-tD-nOQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado juego" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhF-jP-3Gg">
+                                        <rect key="frame" x="126" y="70" width="123" height="70"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOY-rX-9ow">
+                                        <rect key="frame" x="134.5" y="140" width="106" height="70"/>
+                                        <state key="normal" title="Jugar de nuevo"/>
+                                        <connections>
+                                            <action selector="jugarDeNuevo:" destination="fXV-cK-3mf" eventType="touchUpInside" id="QbS-Xx-wGw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rrq-Cs-D3S" firstAttribute="leading" secondItem="npF-Wo-2Y8" secondAttribute="leading" id="2Ul-rv-nJU"/>
+                            <constraint firstItem="Rrq-Cs-D3S" firstAttribute="centerX" secondItem="npF-Wo-2Y8" secondAttribute="centerX" id="92r-9d-jzS"/>
+                            <constraint firstItem="Rrq-Cs-D3S" firstAttribute="centerY" secondItem="npF-Wo-2Y8" secondAttribute="centerY" id="Jz5-Zf-iwA"/>
+                            <constraint firstItem="npF-Wo-2Y8" firstAttribute="trailing" secondItem="Rrq-Cs-D3S" secondAttribute="trailing" id="qSc-Mb-6AK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="npF-Wo-2Y8"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgResultado" destination="GQg-TC-t76" id="mcK-gt-Ctj"/>
+                        <outlet property="lblResultado" destination="fhF-jP-3Gg" id="Cjx-jI-nZU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMx-qF-JBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960.79999999999995" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paper" width="75" height="65"/>
+        <image name="rock" width="75" height="65"/>
+        <image name="scissors" width="75" height="65"/>
+    </resources>
+</document>
