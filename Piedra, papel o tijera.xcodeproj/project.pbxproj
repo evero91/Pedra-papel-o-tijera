@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A10AE502229805100EFFA1B /* Jugada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A10AE4F2229805100EFFA1B /* Jugada.swift */; };
 		3EC90A0F2223006A0054FE09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC90A0E2223006A0054FE09 /* AppDelegate.swift */; };
 		3EC90A112223006A0054FE09 /* JuegoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC90A102223006A0054FE09 /* JuegoViewController.swift */; };
 		3EC90A142223006A0054FE09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EC90A122223006A0054FE09 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A10AE4F2229805100EFFA1B /* Jugada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jugada.swift; sourceTree = "<group>"; };
 		3EC90A0B2223006A0054FE09 /* Piedra, papel o tijera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piedra, papel o tijera.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC90A0E2223006A0054FE09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EC90A102223006A0054FE09 /* JuegoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoViewController.swift; sourceTree = "<group>"; };
@@ -56,13 +58,14 @@
 		3EC90A0D2223006A0054FE09 /* Piedra, papel o tijera */ = {
 			isa = PBXGroup;
 			children = (
+				3EC90A122223006A0054FE09 /* Main.storyboard */,
+				3EC90A172223006C0054FE09 /* LaunchScreen.storyboard */,
+				3EC90A152223006C0054FE09 /* Assets.xcassets */,
+				3EC90A1A2223006C0054FE09 /* Info.plist */,
 				3EC90A0E2223006A0054FE09 /* AppDelegate.swift */,
+				1A10AE4F2229805100EFFA1B /* Jugada.swift */,
 				3EC90A102223006A0054FE09 /* JuegoViewController.swift */,
 				3EC90A2022231E330054FE09 /* ResultadoViewController.swift */,
-				3EC90A122223006A0054FE09 /* Main.storyboard */,
-				3EC90A152223006C0054FE09 /* Assets.xcassets */,
-				3EC90A172223006C0054FE09 /* LaunchScreen.storyboard */,
-				3EC90A1A2223006C0054FE09 /* Info.plist */,
 			);
 			path = "Piedra, papel o tijera";
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A10AE502229805100EFFA1B /* Jugada.swift in Sources */,
 				3EC90A2122231E330054FE09 /* ResultadoViewController.swift in Sources */,
 				3EC90A112223006A0054FE09 /* JuegoViewController.swift in Sources */,
 				3EC90A0F2223006A0054FE09 /* AppDelegate.swift in Sources */,

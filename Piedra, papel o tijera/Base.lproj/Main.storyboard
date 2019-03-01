@@ -53,6 +53,9 @@
                                                     <constraint firstAttribute="height" constant="60" id="n3x-tS-CQN"/>
                                                 </constraints>
                                                 <state key="normal" image="scissors"/>
+                                                <connections>
+                                                    <action selector="tijeras:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XXA-gc-Ixg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -88,24 +91,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rrq-Cs-D3S">
-                                <rect key="frame" x="0.0" y="238.5" width="375" height="210"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Rrq-Cs-D3S">
+                                <rect key="frame" x="0.0" y="236.5" width="375" height="214.5"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kbG-QY-swB">
+                                        <rect key="frame" x="82.5" y="0.0" width="210" height="70"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ceg-8J-bKX">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QM-eG-6mS">
+                                                <rect key="frame" x="70" y="0.0" width="70" height="70"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TTq-Nc-2V5">
+                                                <rect key="frame" x="140" y="0.0" width="70" height="70"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GQg-TC-t76">
-                                        <rect key="frame" x="152.5" y="0.0" width="70" height="70"/>
+                                        <rect key="frame" x="152.5" y="78" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="1hK-mu-G3l"/>
                                             <constraint firstAttribute="height" constant="70" id="J7M-tD-nOQ"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado juego" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhF-jP-3Gg">
-                                        <rect key="frame" x="126" y="70" width="123" height="70"/>
+                                        <rect key="frame" x="126" y="156" width="123" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOY-rX-9ow">
-                                        <rect key="frame" x="134.5" y="140" width="106" height="70"/>
+                                        <rect key="frame" x="134.5" y="184.5" width="106" height="30"/>
                                         <state key="normal" title="Jugar de nuevo"/>
                                         <connections>
                                             <action selector="jugarDeNuevo:" destination="fXV-cK-3mf" eventType="touchUpInside" id="QbS-Xx-wGw"/>
@@ -124,6 +144,8 @@
                         <viewLayoutGuide key="safeArea" id="npF-Wo-2Y8"/>
                     </view>
                     <connections>
+                        <outlet property="imgJugada" destination="ceg-8J-bKX" id="Uyt-u5-9ez"/>
+                        <outlet property="imgJugadaOponente" destination="TTq-Nc-2V5" id="a92-EL-Doh"/>
                         <outlet property="imgResultado" destination="GQg-TC-t76" id="mcK-gt-Ctj"/>
                         <outlet property="lblResultado" destination="fhF-jP-3Gg" id="Cjx-jI-nZU"/>
                     </connections>

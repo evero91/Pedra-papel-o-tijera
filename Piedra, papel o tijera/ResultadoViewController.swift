@@ -10,17 +10,33 @@ import UIKit
 
 class ResultadoViewController: UIViewController {
 
+    @IBOutlet weak var imgJugada: UIImageView!
+    @IBOutlet weak var imgJugadaOponente: UIImageView!
     @IBOutlet weak var imgResultado: UIImageView!
     @IBOutlet weak var lblResultado: UILabel!
     
+    var textoResultado: String!
+    var nombreImagenJugada: String!
+    var nombreImagenJugadaOponente: String!
+    var nombreImagenResultado: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        lblResultado.text = textoResultado
+        
+        establecerImagen(imageView: imgJugada, nombreImagen: nombreImagenJugada)
+        establecerImagen(imageView: imgJugadaOponente, nombreImagen: nombreImagenJugadaOponente)
+        establecerImagen(imageView: imgResultado, nombreImagen: nombreImagenResultado)
     }
     
     @IBAction func jugarDeNuevo(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    private func establecerImagen(imageView: UIImageView, nombreImagen: String) {
+        if let imagen = UIImage(named: nombreImagen) {
+            imageView.image = imagen
+        }
     }
 
 }
